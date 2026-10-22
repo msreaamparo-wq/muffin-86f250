@@ -40,10 +40,17 @@ pre .c{color:#fff}pre .e{color:#ff3355}pre .w{color:#ffd23f}pre .b{color:#4db8ff
 .shake{animation:shake .25s}
 @keyframes shake{25%{transform:translate(-6px,3px)}50%{transform:translate(5px,-4px)}75%{transform:translate(-3px,-2px)}}
 .invert{filter:invert(1) hue-rotate(160deg)}
-#tapZone{position:absolute;top:0;left:0;width:90px;height:90px;z-index:50}
 @media(max-width:760px){
   .hud{padding:8px;gap:6px}.topbar,.statusbar{font-size:11px;padding:5px 8px}
   .grid{grid-template-columns:1fr;grid-template-rows:1.25fr 1fr;gap:6px}
   .col{flex-direction:row;gap:6px}.col .panel{flex:1;min-width:0}.col .panel:nth-child(2){display:none}
   .cam{flex:1!important}
 }
+
+#exitBtn{padding:8px 6px;margin:-8px -6px;cursor:none}
+#warn,.wbox{pointer-events:none}
+#gate{position:fixed;inset:0;z-index:100;background:#000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;color:#19ff7a;cursor:pointer}
+.gspin{width:42px;height:42px;border:3px solid #0b5;border-top-color:transparent;border-radius:50%;animation:sp .9s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+.gtxt{font-size:15px;letter-spacing:2px;opacity:.8}
+.gtap{font-size:18px;letter-spacing:3px;animation:bl 1.1s infinite;padding:14px 22px;border:1px solid #0b5;border-radius:4px}
